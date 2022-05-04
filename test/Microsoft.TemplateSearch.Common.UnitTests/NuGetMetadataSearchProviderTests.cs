@@ -343,6 +343,8 @@ namespace Microsoft.TemplateSearch.Common.UnitTests
 
             public int ConsoleBufferWidth => 100;
 
+            public string UserProfilePath => Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+
             public void SetEnvironmentVariable(string name, string? value)
             {
                 if (value != null)
@@ -352,7 +354,7 @@ namespace Microsoft.TemplateSearch.Common.UnitTests
                 else
                 {
                     _envVars.Remove(name);
-                }    
+                }
             }
 
             //not supported as the mock, but not needed.

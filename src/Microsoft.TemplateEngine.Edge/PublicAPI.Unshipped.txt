@@ -1,1 +1,2 @@
 ﻿~Microsoft.TemplateEngine.Edge.FilterableTemplateInfo.PostActions.get -> System.Collections.Generic.IReadOnlyList<System.Guid>
+Microsoft.TemplateEngine.Edge.DefaultEnvironment.UserProfilePath.get -> string!

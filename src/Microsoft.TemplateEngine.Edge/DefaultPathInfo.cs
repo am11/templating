@@ -98,8 +98,7 @@ namespace Microsoft.TemplateEngine.Edge
         private static string GetUserProfileDir (IEnvironment environment)
         {
             bool isWindows = RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
-            return environment.GetEnvironmentVariable(isWindows ? "USERPROFILE" : "HOME")
-                ?? throw new NotSupportedException("HOME or USERPROFILE environment variable is not defined, the environment is not supported");
+            return environment.GetEnvironmentVariable(isWindows ? "USERPROFILE" : "HOME") ?? environment.UserProfilePath;
         }
 
         private static string GetDefaultGlobalSettingsDir (string userDir)
